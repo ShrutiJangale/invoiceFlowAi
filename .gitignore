@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+invoiceFlowEnv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Ignore specific project folders
+processed/
+Raw_extracted_text/
+transformed_data/
+uploads/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

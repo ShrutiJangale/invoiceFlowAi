@@ -1,0 +1,48 @@
+{
+  "invoice_number": "123100401",
+  "customer_number": "12345",
+  "invoice_period": "01.02.2024 - 29.02.2024",
+  "date": "1. März 2024",
+  "total_amount": "381,12 €",
+  "vat": "72,41 €",
+  "gross_amount": "453,53 €",
+  "period_start": "01.02.2024",
+  "period_end": "29.02.2024",
+  "unit": "Musterkunde AG",
+  "amounts": [
+    0.58,
+    0.7,
+    1.5,
+    0.5,
+    0.8,
+    1.8,
+    0.3,
+    0.3,
+    0.4,
+    0.4,
+    0.3,
+    0.3
+  ],
+  "user_account_1": {
+    "value": 154.3
+  },
+  "user_account_2": {
+    "value": 96.82
+  },
+  "queries_total": [
+    14,
+    0,
+    162,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "total_in_euro": 251.12,
+  "query_reference": ""
+}

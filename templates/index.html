@@ -1,0 +1,101 @@
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoiceFlow AI - Invoice Processing System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h1>InvoiceFlow AI</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-container" id="uploadContainer">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h2>Upload Your Invoice</h2>
+                    <p>Drag and drop your invoice file here, or click to browse</p>
+                    <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" hidden>
+                    <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-folder-open"></i>
+                        Browse Files
+                    </button>
+                </div>
+
+                <div class="category-section">
+                    <label for="categorySelect">Select Invoice Category:</label>
+                    <select id="categorySelect" class="category-dropdown">
+                        <option value="">Choose a category...</option>
+                        <option value="Hospital Invoice">🏥 Hospital Invoice</option>
+                        <option value="Restaurant Invoice">🍽️ Restaurant Invoice</option>
+                        <option value="Hotel Invoice">🏨 Hotel Invoice</option>
+                        <option value="Retail Invoice">🛍️ Retail Invoice</option>
+                        <option value="Service Invoice">🔧 Service Invoice</option>
+                        <option value="Transportation Invoice">🚗 Transportation Invoice</option>
+                        <option value="Utility Invoice">⚡ Utility Invoice</option>
+                        <option value="Other">📄 Other</option>
+                    </select>
+                </div>
+
+                <div class="upload-btn-section">
+                    <button class="upload-btn" id="uploadBtn" disabled>
+                        <i class="fas fa-upload"></i>
+                        Process Invoice
+                    </button>
+                    <button class="reset-btn" id="resetBtn" onclick="resetFileSelection()">
+                        <i class="fas fa-refresh"></i>
+                        Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="progress-section" id="progressSection" style="display: none;">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">Processing...</p>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h3>Processing Results</h3>
+                <div class="results-split">
+                    <div class="preview-pane">
+                        <iframe id="pdfPreview" class="pdf-preview" title="Invoice Preview"></iframe>
+                    </div>
+                    <div class="kv-pane">
+                        <h4>Extracted Fields</h4>
+                        <table class="kv-table" id="kvTable">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <h3>File Information</h3>
+                <div class="file-details" id="fileDetails"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 InvoiceFlow AI Powered</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+{% endraw %}
+
